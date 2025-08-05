@@ -1,0 +1,219 @@
+/* ---------- Reset & Base ---------- */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #fdfaf6;
+    color: #222;
+    line-height: 1.6;
+}
+
+a {
+    text-decoration: none;
+    color: #e85d04;
+    transition: color 0.3s ease;
+}
+
+a:hover {
+    color: #d00000;
+}
+
+/* ---------- Header & Navbar (Slimmer) ---------- */
+header {
+    background-color: #03045e;
+    color: white;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    padding: 10px 0; /* Slimmer padding */
+    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+    z-index: 1000;
+    text-align: center;
+}
+
+.logo-title h1 {
+    font-size: 1.8rem;
+    margin: 0;
+}
+
+.tagline {
+    font-size: 0.85rem;
+    color: #90e0ef;
+}
+
+nav {
+    margin-top: 8px;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 30px; /* slightly less gap for tighter layout */
+    padding: 0;
+    margin: 5px 0;
+}
+
+nav li {
+    display: inline;
+}
+
+nav a {
+    color: white;
+    font-weight: 500;
+    font-size: 0.95rem;
+    padding: 6px 12px; /* tighter padding */
+    border-radius: 6px;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+nav a:hover,
+nav .active {
+    background-color: #00b4d8;
+    transform: scale(1.05);
+}
+
+
+/* ---------- Layout ---------- */
+main {
+    padding: 140px 60px 60px 60px;
+    max-width: 1200px;
+    margin: auto;
+}
+
+/* ---------- Hero Section ---------- */
+.hero {
+    position: relative;
+    margin-bottom: 40px;
+}
+
+.hero img {
+    width: 100%;
+    border-radius: 15px;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+}
+
+.badge {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    background-color: crimson;
+    color: white;
+    padding: 10px 20px;
+    font-weight: bold;
+    border-radius: 30px;
+    animation: blink 3s infinite;
+}
+
+/* ---------- Sections ---------- */
+section {
+    margin-bottom: 50px;
+}
+
+h2 {
+    font-size: 2em;
+    color: #023e8a;
+    margin-bottom: 15px;
+}
+
+h3 {
+    font-size: 1.5em;
+    color: #0077b6;
+    margin-top: 20px;
+}
+
+p {
+    font-size: 1.1em;
+    margin-bottom: 15px;
+}
+
+/* ---------- Gallery ---------- */
+.gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
+}
+
+.gallery-grid article {
+    background-color: #ffffff;
+    padding: 20px;
+    border: 2px solid #90e0ef;
+    border-radius: 12px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.gallery-grid article:hover {
+    transform: scale(1.05);
+}
+
+.gallery-grid img {
+    width: 100%;
+    border-radius: 10px;
+    margin-bottom: 15px;
+}
+
+/* ---------- Video Section ---------- */
+.video-section video {
+    width: 100%;
+    border-radius: 12px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+}
+
+/* ---------- About Page Lists ---------- */
+ul, ol {
+    padding-left: 20px;
+    margin-bottom: 20px;
+}
+
+ul li::before {
+    content: "•";
+    color: #e85d04;
+    font-weight: bold;
+    display: inline-block;
+    width: 1em;
+    margin-left: -1em;
+}
+
+/* ---------- Contact Table ---------- */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+table th, table td {
+    border: 1px solid #bbb;
+    padding: 12px;
+    text-align: center;
+    font-size: 1em;
+}
+
+thead {
+    background-color: #0077b6;
+    color: white;
+}
+
+tbody tr:nth-child(odd) {
+    background-color: #f1f1f1;
+}
+
+/* ---------- Footer ---------- */
+footer {
+    text-align: center;
+    background-color: #03045e;
+    color: white;
+    padding: 20px;
+    margin-top: 60px;
+}
+
+/* ---------- Animations ---------- */
+@keyframes blink {
+    0% { opacity: 1; transform: scale(1); }
+    50% { opacity: 0.6; transform: scale(1.1); }
+    100% { opacity: 1; transform: scale(1); }
+}
